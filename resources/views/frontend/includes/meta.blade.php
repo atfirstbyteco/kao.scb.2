@@ -13,10 +13,25 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 
-<meta property="fb:app_id" content="" />
+<!-- Facebook Propertie -->
+<meta property= "fb:app_id" content= "817308938474623" />
 <meta property="og:url" content="{{ URL::current() }}" />
 <meta property="og:type" content="website" />
 
-<meta property="og:title" content="@yield('og_title')" />
-<meta property="og:description" content="@yield('og_description')" />
-<meta property="og:image" content="{{ url('/') }}@yield('og_image')" />
+<meta property="og:title" content="ภาพยนตร์ก้าวคนละก้าว" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="{{ url('/images/Share.jpg') }}" />
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="628"/>
+<!-- Tweet Propertie -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@kaokonlakao" />
+<meta name="twitter:creator" content="@kaokonlakao">
+<meta name="twitter:title" content="ภาพยนตร์ก้าวคนละก้าว" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:image" content="{{ url('/images/Share.jpg') }}" />
+
+<!-- Google Plus -->
+<meta itemprop="name" content="ภาพยนตร์ก้าวคนละก้าว">
+<meta itemprop="description" content="">
+<meta itemprop="image" content="{{ url('/images/Share.jpg') }}">

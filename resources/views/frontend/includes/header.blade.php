@@ -3,7 +3,7 @@
 	<head>
 		@include('frontend.includes.meta')
 
-		<title>Title</title>
+		<title>ภาพยนตร์ก้าวคนละก้าว</title>
 		<link rel="icon" type="image/png" href="{{ url('/images/icon/icon.ico') }}" sizes="32x32" />
 
 		@include('frontend.includes.stylesheet')

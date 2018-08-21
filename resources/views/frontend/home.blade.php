@@ -1,9 +1,5 @@
 @extends('layouts.master')
 
-@section('og_title', "Match of The Weeks")
-@section('og_description', "ลุ้นรางวัล ดูบอลที่อังกฤษทุกเดือน")
-@section('og_image', "/images/share/share.jpg")
-
 @section('content')
 
 <!-- <div class="wrappage-page bg_home non-fullpage home-page">
@@ -41,7 +37,6 @@
 				</div>
 			</div>
 
-			@include('frontend.components.home-share')
 
 		</div>
 	</div>
