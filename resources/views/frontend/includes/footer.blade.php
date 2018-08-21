@@ -60,6 +60,6 @@
 		</div>
 
 	</div>
-		
+	@include('frontend.includes.footer_script')
 </body>
 </html>

@@ -1,7 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
+<div class="p-5">
 
+</div>
 <!-- <div class="wrappage-page bg_home non-fullpage home-page">
 
 	<div class="home-slider">

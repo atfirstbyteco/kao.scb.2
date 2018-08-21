@@ -17984,12 +17984,13 @@ ul li {
 
 html,
 body {
-  background-color: #1c2f55;
+  background-color: #193153;
   height: 100%;
   color: #fff;
-  font-family: 'db_heaventregular';
   overflow-x: hidden;
+  font-family: 'db_heaventregular';
   font-size: 16px;
+  -webkit-overflow-scrolling: touch;
 }
 
 a {
@@ -18140,6 +18141,122 @@ a.color-navy:focus {
 Header
 ***********************************************/
 
+nav.navbar {
+  padding: 0;
+  background-color: #193153;
+}
+
+nav.navbar .navbar-header {
+  padding: 0.5rem 1rem;
+  background: #366083 url(/images/header-bg.png) no-repeat center right/auto 100%;
+}
+
+nav.navbar .navbar-header .navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+nav.navbar .navbar-header .navbar-brand img {
+  max-width: 100%;
+  max-height: 50px;
+}
+
+nav.navbar .nav-item {
+  list-style: none;
+  padding: 2.4rem 0.5rem 0.2rem;
+}
+
+nav.navbar .nav-item .nav-link {
+  border-radius: 0;
+  padding: 0;
+  font-family: 'db_heaventlight';
+  text-indent: -1rem;
+}
+
+nav.navbar .nav-item.active,
+nav.navbar .nav-item:focus,
+nav.navbar .nav-item:hover {
+  background: url(/images/header-bg-hover.png) no-repeat center top/100% auto;
+}
+
+nav.navbar .nav-item.active .nav-link,
+nav.navbar .nav-item:focus .nav-link,
+nav.navbar .nav-item:hover .nav-link {
+  color: #fff;
+}
+
+.cd-primary-nav-trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-height: 45px;
+  height: 100%;
+  width: 45px;
+  background: none;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 28px;
+  height: 2px;
+  background: #fff;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon:before,
+.cd-primary-nav-trigger .cd-menu-icon:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #fff;
+  right: 0;
+  -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+  -webkit-transition: top .3s, background-color 0s, -webkit-transform .3s;
+  transition: top .3s, background-color 0s, -webkit-transform .3s;
+  transition: transform .3s, top .3s, background-color 0s;
+  transition: transform .3s, top .3s, background-color 0s, -webkit-transform .3s;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon:before {
+  top: -7px;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon:after {
+  top: 7px;
+}
+
+.cd-primary-nav-trigger[aria-expanded="true"] {
+  z-index: 150;
+}
+
+.cd-primary-nav-trigger[aria-expanded="true"] .cd-menu-icon {
+  background: none;
+}
+
+.cd-primary-nav-trigger[aria-expanded="true"] .cd-menu-icon:before,
+.cd-primary-nav-trigger[aria-expanded="true"] .cd-menu-icon:after {
+  background: #fff;
+}
+
+.cd-primary-nav-trigger[aria-expanded="true"] .cd-menu-icon:before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.cd-primary-nav-trigger[aria-expanded="true"] .cd-menu-icon:after {
+  top: 0;
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
 /***********************************************
 Footer
 ***********************************************/
@@ -18197,6 +18314,34 @@ Responsive
 @media (max-width: 1199.98px) {
   .container {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  nav.navbar .navbar-header {
+    padding: 0.25rem 0.5rem;
+  }
+
+  nav.navbar .navbar-header .navbar-brand img {
+    max-height: 40px;
+  }
+
+  nav.navbar .nav-item {
+    list-style: none;
+    padding: 1rem 0.5rem;
+  }
+
+  nav.navbar .nav-item .nav-link {
+    padding: 0;
+    font-family: 'db_heaventlight';
+    text-indent: 0;
+  }
+
+  nav.navbar .nav-item.active,
+  nav.navbar .nav-item:focus,
+  nav.navbar .nav-item:hover {
+    background: url(/images/header-bg-hover.png) no-repeat center top/200% 100%;
+    border-bottom: 1px solid #fff;
   }
 }
 

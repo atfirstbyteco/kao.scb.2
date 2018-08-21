@@ -15,7 +15,24 @@
 		<div id="app">
 
 			<!-- Fixed navbar -->
-	        <nav id="header" class="navbar sticky-top navbar-expand-md justify-content-center">
-	           nav
-	        </nav>
+	        <nav id="header" class="navbar sticky-top navbar-expand-md align-items-end">
+		        <div class="container-fluid pl-0 pr-0">
+		            <div class="navbar-header d-flex w-auto mr-auto">
+	                    <a id="brand" class="navbar-brand" href="{{ url('/') }}">
+	                    	<img src="{{ url('images/logo/logo_siri.png') }}" />
+	                    </a>
+	                </div>
+	                <button class="navbar-toggler cd-primary-nav-trigger collapsed" type="button" data-toggle="collapse" data-target="#mainNav" aria-expanded="false">
+                    	<span class="cd-menu-icon"></span>
+                    </button>
+		            <div class="navbar-collapse collapse" id="mainNav">
+    					<ul class="navbar-nav w-100 justify-content-center nav-pills nav-fill">
+		                    <li class="nav-item active"><a class="nav-link" href="{{ url('/') }}">หน้าหลัก</a></li>
+		                    <li class="nav-item"><a class="nav-link" href="{{ url('/howto') }}">วิธีบริจาค</a></li>
+		                    <li class="nav-item"><a class="nav-link" href="{{ url('/howtomovie') }}">วิธีรับตั๋วภาพยนตร์</a></li>
+		                    <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">ที่มาโครงการ</a></li>
+		                </ul>
+		            </div>
+		        </div>
+		    </nav>
 	        <!-- End Fixed navbar -->

@@ -58,12 +58,13 @@ ul li { list-style: disc; line-height: 1.6; }
 
 html,
 body {
-  background-color: #1c2f55;
+  background-color: $color-navy;
   height: 100%;
   color: #fff;
-  font-family: 'db_heaventregular';
   overflow-x: hidden;
+  font-family: 'db_heaventregular';
   font-size: 16px;
+  -webkit-overflow-scrolling: touch;
 }
 
 a {
@@ -178,6 +179,106 @@ a {
 /***********************************************
 Header
 ***********************************************/
+nav.navbar {
+  padding: 0;
+  background-color: #193153;
+  .navbar-header {
+    padding: 0.5rem 1rem;
+    background: #366083 url(/images/header-bg.png) no-repeat center right / auto 100%;
+    .navbar-brand {
+      padding-top: 0;
+      padding-bottom: 0;
+      img {
+        max-width: 100%;
+        max-height: 50px;
+      }
+    }
+  }
+  .nav-item {
+    list-style: none;
+    padding: 2.4rem 0.5rem 0.2rem;
+    .nav-link {
+      border-radius: 0;
+      padding: 0;
+      font-family: 'db_heaventlight';
+      text-indent: -1rem;
+    }
+    &.active,
+    &:focus,
+    &:hover {
+      background: url(/images/header-bg-hover.png) no-repeat center top / 100% auto;
+      .nav-link {
+        color: #fff;
+      } 
+    }
+  }
+}
+
+.cd-primary-nav-trigger {
+  position: absolute; 
+  right: 0; 
+  top: 0; 
+  max-height: 45px; 
+  height: 100%;
+  width: 45px; 
+  background: none;
+  .cd-menu-icon {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    &:before,
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: #fff;
+      right: 0;
+      -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+      -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+      transition: transform .3s, top .3s, background-color 0s;
+    }
+    &:before { top: -7px; }
+    &:after { top: 7px; }
+  }
+  &[aria-expanded="true"] { 
+    z-index: 150;
+    .cd-menu-icon { 
+      background: none;
+      &:before,
+      &:after {
+        background: #fff;
+      }
+      &:before {
+        top: 0;
+        -webkit-transform: rotate(135deg);
+        -moz-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }
+      &:after {
+        top: 0;
+        -webkit-transform: rotate(225deg);
+        -moz-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+        -o-transform: rotate(225deg);
+        transform: rotate(225deg);
+      }
+    }
+  }
+}
 
 
 /***********************************************
@@ -249,7 +350,32 @@ Responsive
 
 
 @media (max-width: 767.98px) {
-	
+	nav.navbar {
+    .navbar-header {
+      padding: 0.25rem 0.5rem;
+      // &.w-25 {
+      //   width: auto !important;
+      // }
+      .navbar-brand img {
+        max-height: 40px;
+      }
+    }
+    .nav-item {
+      list-style: none;
+      padding: 1rem 0.5rem;
+      .nav-link {
+        padding: 0;
+        font-family: 'db_heaventlight';
+        text-indent: 0;
+      }
+      &.active,
+      &:focus,
+      &:hover {
+        background: url(/images/header-bg-hover.png) no-repeat center top / 200% 100%;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
 
 
 }
