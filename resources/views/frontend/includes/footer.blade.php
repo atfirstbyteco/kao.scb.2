@@ -1,7 +1,7 @@
 		<footer id="about">
 			<div class="container">
 				<div class="row justify-content-center">
-					<div class="col-12 col-md-5 pr-30 pr-sm-15">
+					<div class="col-12 col-md-6 col-xl-5 pl-30 pl-sm-15 pr-30 pr-sm-15">
 						<div class="title row justify-content-between align-items-center">
 							<div class="col-10 pr-0 text-italic">
 								โครงการก้าวคนละก้าว <span class="text-small font-light">เพื่อจัดซื้ออุปกรณ์ทางการแพทย์<br class="d-none d-md-block" />
@@ -29,14 +29,14 @@
 						<div class="row">
 							<div class="col-xs-6 col-sm-6">
 								<span class="text-small">follow us</span><br />
-								<a class="btn-icon-circle btn-navy" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+								<a class="btn-icon-circle btn-navy mt-1" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 							</div>
 							<div class="col-xs-6 col-sm-6 text-right">
 								<a href="#" class="btn btn-navy inline-block mt-4 mt-md-2">ร่วมบริจาค</a>
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-md-5 pl-30 pl-sm-15">
+					<div class="col-12 col-md-6 col-xl-5 pr-30 pr-sm-15 pl-30 pl-sm-15">
 						<div class="title mb-4 pt-5 pt-md-3">ผู้สนับสนุน</div>
 						<div class="row">
 	                		@for($i=1; $i<=12; $i++)
