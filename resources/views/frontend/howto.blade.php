@@ -230,7 +230,7 @@
 									</div>
 									<div class="text-white mb-30">
 										<div class="text-white mb-30">
-										<div class="text-large mb-1"><a id="openLink1" href="javascript:;">ช่องทางบริจาคอื่นๆ</a></div>
+										<div class="text-large mb-1">ช่องทางบริจาคอื่นๆ</div>
 										   - บริจาคผ่านกล่องรับบริจาคของโครงการ “ก้าวคนละก้าว” ตรงเคาน์เตอร์หน้าโรงภาพยนตร์ ในเครือ SF และ Major ตั้งแต่วันที่ 6 - 30 ส.ค. 61<br />
 										   <br />- บริจาคผ่านช่องทาง True Money Wallet ตั้งแต่วันนี้ – 28 ก.พ. 62
 
@@ -266,53 +266,6 @@
 		}
 		$(init);
 	})();
-	$(document).ready(function () {
 
-        $(window).resize(function () {
-        	if ($('.section-howto').height() < $('.tabs-left').height()) {
-        		$('.section-howto').addClass('free-height');
-        	} else {
-        		$('.section-howto').removeClass('free-height');
-        	}
-
-        });
-
-        $(window).resize();
-
-        // $('.nav-tabs a').click(function(){
-        // 	$(window).resize();
-        // });
-
-	});
-
-
-	// $('#openLink1').on('click', function () {
-	// 	swal({
-	// 	  type: 'info',
-	// 	  background: '#1392cd',
-	// 	  customClass: 'text-white',
-	// 	  html: '<div class="mb-15 text-white">ท่านกำลังออกจากเว็บไซต์ kaokonlakao และเข้าสู่เว็บไซต์ www.ruckdee.com </div>',
-	// 	  showCancelButton: false,
-	// 	  confirmButtonText: 'ตกลง',
-	// 	  confirmButtonColor: '#ffffff',
-	// 	  confirmButtonClass: 'text-blue'
-	// 	}).then(function() {
-	// 		window.location.href = "http://www.ruckdee.com", "_blank";
-	// 	});
-	// });
-	// $('#openLink2').on('click', function () {
-	// 	swal({
-	// 	  type: 'info',
-	// 	  background: '#1392cd',
-	// 	  customClass: 'text-white',
-	// 	  html: '<div class="mb-15 text-white">ท่านกำลังออกจากเว็บไซต์ kaokonlakao และเข้าสู่เว็บไซต์ www.scbeasy.com </div>',
-	// 	  showCancelButton: false,
-	// 	  confirmButtonText: 'ตกลง',
-	// 	  confirmButtonColor: '#ffffff',
-	// 	  confirmButtonClass: 'text-blue'
-	// 	}).then(function() {
-	// 		window.location.href = "http://www.scbeasy.com", "_blank";
-	// 	});
-	// });
 </script>
 @endsection

@@ -18816,6 +18816,33 @@ table tbody tr:last-child td:last-child {
   background: none;
 }
 
+.page-ticket.section-detail {
+  background-color: #fff;
+}
+
+.page-ticket.section-detail .text-medium {
+  font-size: 1.6em;
+}
+
+.page-ticket.section-detail .text-large {
+  font-size: 2em;
+}
+
+.page-ticket.section-detail .text-lextra-arge {
+  font-size: 2.5em;
+}
+
+.page-ticket .box {
+  border: 2px solid #758398;
+  color: #193153;
+  padding: 2rem 1rem;
+  border-radius: 2px;
+}
+
+.page-ticket .box .text-medium {
+  line-height: 1.8;
+}
+
 /***********************************************
 Responsive
 ***********************************************/
@@ -18876,6 +18903,16 @@ Responsive
   nav.navbar .nav-item:hover {
     background: url(/images/header-bg-hover.png) no-repeat center top/200% 100%;
     border-bottom: 1px solid #fff;
+  }
+
+  .page-ticket {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-ticket .box {
+    font-size: 10px;
   }
 }
 

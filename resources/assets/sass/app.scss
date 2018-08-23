@@ -620,10 +620,17 @@ table {
   border-radius: 20px; 
   border-collapse: separate;
   border: 0px solid #fff;
+  tr {
+    th,
+    td {
+      border: .5px solid #fff; 
+      padding: 8px 5px; 
+      border-collapse: collapse; 
+      text-align: center;
+    }
+    th { border-width: 1px; }
+  }
 }
-table tr th,
-table tr td { border: .5px solid #fff; padding: 8px 5px; border-collapse: collapse; text-align: center; }
-table tr th { border-width: 1px; }
 table thead tr:first-child th:first-child { border-top-left-radius: 20px; }
 table thead tr:first-child th:last-child { border-top-right-radius: 20px; }
 table tbody tr:last-child td:first-child { border-bottom-left-radius: 20px; }
@@ -687,6 +694,22 @@ table tbody tr:last-child td:last-child { border-bottom-right-radius: 20px; }
 #popup-banner {
   .modal-content {
     background: none;
+  }
+}
+
+.page-ticket {
+  &.section-detail {
+    background-color: #fff;
+    .text-medium { font-size: 1.6em; }
+    .text-large { font-size: 2em; }
+    .text-lextra-arge { font-size: 2.5em; }
+  }
+  .box {
+    border: 2px solid #758398;
+    color: $color-navy;
+    padding: 2rem 1rem;
+    border-radius: 2px;
+    .text-medium { line-height: 1.8; }
   }
 }
 
@@ -767,12 +790,20 @@ Responsive
   }
 
 
+  .page-ticket {
+    font-size: 12px;
+  }
+
 }
 
 
 @media (max-width: 575.98px) {
 	
-
+  .page-ticket {
+    .box {
+      font-size: 10px;
+    }
+  }
 
 }
 
