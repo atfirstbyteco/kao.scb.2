@@ -9,12 +9,12 @@
     font-family: 'db_heaventthin';
     src: url('db_heavent_thin_v3.2-webfont.eot');
     src: url('db_heavent_thin_v3.2-webfont.eot?#iefix') format('embedded-opentype'),
-         url('db_heavent_thin_v3.2-webfont.woff2') format('woff2'),
          url('db_heavent_thin_v3.2-webfont.woff') format('woff'),
          url('db_heavent_thin_v3.2-webfont.ttf') format('truetype'),
          url('db_heavent_thin_v3.2-webfont.svg#db_heaventthin') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display:block;
 }
 @font-face {
     font-family: 'db_heaventmed';
@@ -26,28 +26,29 @@
          url('db_heavent_med_v3.2-webfont.svg#db_heaventmed') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display:block;
 }
 @font-face {
     font-family: 'db_heaventlight';
     src: url('db_heavent_li_v3.2-webfont.eot');
     src: url('db_heavent_li_v3.2-webfont.eot?#iefix') format('embedded-opentype'),
-         url('db_heavent_li_v3.2-webfont.woff2') format('woff2'),
          url('db_heavent_li_v3.2-webfont.woff') format('woff'),
          url('db_heavent_li_v3.2-webfont.ttf') format('truetype'),
          url('db_heavent_li_v3.2-webfont.svg#db_heaventlight') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display:block;
 }
 @font-face {
     font-family: 'db_heaventregular';
     src: url('db_heavent_v3.2-webfont.eot');
     src: url('db_heavent_v3.2-webfont.eot?#iefix') format('embedded-opentype'),
-         url('db_heavent_v3.2-webfont.woff2') format('woff2'),
          url('db_heavent_v3.2-webfont.woff') format('woff'),
          url('db_heavent_v3.2-webfont.ttf') format('truetype'),
          url('db_heavent_v3.2-webfont.svg#db_heaventregular') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display:block;
 }
 @font-face {
     font-family: 'db_heaventbold';
@@ -59,4 +60,5 @@
          url('db_heavent_bd_v3.2-webfont.svg#db_heaventbold') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display:block;
 }

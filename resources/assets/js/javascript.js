@@ -2,7 +2,7 @@ $(document).ready(function() {
 	$(window).on('load',function(){
         $('#popup-banner').modal('show');
     });
-    
+
 	// $('.home-ranking .open-list').on('click', function (e) {
 	// 	$(this).parent('.home-ranking').toggleClass('active');
 	// });

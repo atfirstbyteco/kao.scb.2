@@ -15,3 +15,11 @@ Route::get('/', function () {
     return view('frontend.home');
 });
 
+Route::get('/howto', function () {
+    return view('frontend.howto');
+});
+
+Route::get('/howtoticket', function () {
+    return view('frontend.howtoticket');
+});
+

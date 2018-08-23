@@ -355,6 +355,9 @@ footer {
     line-height: normal; 
     margin: 15px 0; 
   }
+  .btn-icon-circle {
+    line-height: 36px;
+  }
   // .btn-square span {
   //   top: 7.5px; 
   //   left: 7.5px; 
@@ -519,6 +522,114 @@ section {
 /***********************************************
 Page
 ***********************************************/
+ul {
+  margin: 0;
+  li { list-style: none; }
+}
+.section-howto {
+  font-size: 14px;
+  padding-bottom: 50%;
+  min-height: 92vh;
+  position: relative;
+  background: url(/images/home/howto-bg-bottom.png) no-repeat center / cover;
+  .text-large { font-size: 1.25em; }
+  .content { 
+    position: absolute; 
+    top: 50%; 
+    left: 0; 
+    width: 100%; 
+    transform: translateY(-50%);
+  }
+  &.free-height {
+    padding-bottom: 30px;
+    .content { 
+      position: relative;
+      transform: none;
+      top: auto;
+    }
+  }
+}
+
+.nav-tabs {
+  padding: 0 15px;
+  border: 0;
+  margin: 0;
+  .nav-item { 
+    display: block;
+    width: 100%;
+    max-width: 90px;
+    margin: 0; 
+    margin-left: auto;
+    padding: 5px 10px;
+    .item {
+      width: 100%; 
+      position: relative; 
+      padding-bottom: 100%; 
+      .a { 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        bottom: 0; 
+        padding: 5px; 
+        background: transparent; 
+        border: 2px solid #fff; 
+        border-radius: 10px;
+        img {
+          width: 100%;
+        }
+        &:hover { border: 2px solid $color-blue; }
+      }
+    }
+    &.active {
+      .item .a {
+        border: 2px solid $color-blue;
+        &:hover,
+        &:focus {
+          border: 2px solid $color-blue;
+        }
+      }
+    }
+  }
+}
+.nav-tabs .nav-link,
+.nav-tabs .nav-link.active, 
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-item.show .nav-link {
+  background: none;
+  border-radius: 0;
+  border: 0;
+}
+.tab-content { 
+  .tab-pane { 
+    display: none; 
+    background: rgba(15,28,55,0.8); 
+    padding: 45px 25px; 
+    line-height: normal; 
+    font-family: 'db_heaventlight'; 
+    border-radius: 20px; 
+    overflow-y: auto;
+    &.active { display: block; }
+  }  
+}
+
+table { 
+  table-layout: fixed; 
+  width: 100%; 
+  border-radius: 20px; 
+  border-collapse: separate;
+  border: 0px solid #fff;
+}
+table tr th,
+table tr td { border: .5px solid #fff; padding: 8px 5px; border-collapse: collapse; text-align: center; }
+table tr th { border-width: 1px; }
+table thead tr:first-child th:first-child { border-top-left-radius: 20px; }
+table thead tr:first-child th:last-child { border-top-right-radius: 20px; }
+table tbody tr:last-child td:first-child { border-bottom-left-radius: 20px; }
+table tbody tr:last-child td:last-child { border-bottom-right-radius: 20px; }
+
+
 .modal {
   .modal-dialog {
     min-height: calc(100vh - 60px);

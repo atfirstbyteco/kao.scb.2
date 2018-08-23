@@ -259,7 +259,7 @@
 </div>
 @endsection
 
-@section('scripts')
+@section('script')
 
 <script type="text/javascript">
 // $(document).ready(function() {
