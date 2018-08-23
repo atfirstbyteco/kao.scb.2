@@ -10,7 +10,7 @@
 						
 						<div class="tabs-left row justify-content-cente align-items-start">
 							<div class="nav nav-tabs col-12 col-md-2 pt-1" id="nav-tab" role="tablist">
-								<a class="nav-item nav-link @if(!isset($_GET['step'])) active @endif @if(isset($_GET['step']) && $_GET['step'] == 'sms') active @endif pt-0" href="#a" data-toggle="tab">
+								<a class="nav-item nav-link @if(!isset($_GET['step'])) active @endif @if(isset($_GET['step']) && $_GET['step'] == 'sms') active @endif" href="#a" data-toggle="tab">
 									<div class="item">
 										<div class="a"><img src="{{ url('/images/icon/icon_donate_SMS.png') }}" /></div>
 									</div>
@@ -46,10 +46,10 @@
 									</div>
 								</a>
 							</div>
-							<div class="tab-content col-12 col-md-10 pl-0">
+							<div class="tab-content col-12 col-md-10 pl-sm-15 pl-md-0 mt-sm-30 mt-xs-15">
 								<div class="tab-pane @if(!isset($_GET['step'])) active @endif @if(isset($_GET['step']) && $_GET['step'] == 'sms') active @endif" id="a">
 									<div class="icon-list mb-15 row justify-content-center ml-xs-0">
-										<div class="col-6 col-md-4">
+										<div class="col-6 col-sm-4 col-md-4">
 											<div class="item">
 												<div class="btn-icon" href="javascript:;"><img src="{{ url('/images/icon/icon_donate_SMS.png') }}" /></div>
 											</div>
@@ -66,7 +66,7 @@
 								</div>
 								<div class="tab-pane @if(isset($_GET['step']) && $_GET['step'] == 'bookbank') active @endif" id="b">
 									<div class="icon-list mb-15 row justify-content-center ml-xs-0">
-										<div class="col-6 col-md-4">
+										<div class="col-6 col-sm-4 col-md-4">
 											<div class="item">
 												<div class="btn-icon" href="javascript:;"><img src="{{ url('/images/icon/icon_donate_book.png') }}" /></div>
 											</div>
@@ -82,7 +82,7 @@
 								</div>
 								<div class="tab-pane @if(isset($_GET['step']) && $_GET['step'] == 'promtpay') active @endif" id="c">
 									<div class="icon-list mb-15 row justify-content-center ml-xs-0">
-										<div class="col-6 col-md-4">
+										<div class="col-6 col-sm-4 col-md-4">
 											<div class="item">
 												<div class="btn-icon" href="javascript:;"><img src="{{ url('/images/icon/icon_donate_prompt_pay.png') }}" /></div>
 											</div>
@@ -157,7 +157,7 @@
 								</div>
 								<div class="tab-pane @if(isset($_GET['step']) && $_GET['step'] == 'atm') active @endif" id="e">
 									<div class="icon-list mb-15 row justify-content-center ml-xs-0">
-										<div class="col-6 col-md-4">
+										<div class="col-6 col-sm-4 col-md-4">
 											<div class="item">
 												<div class="btn-icon" href="javascript:;"><img src="{{ url('/images/icon/icon_donate_ATM.png') }}" /></div>
 											</div>
@@ -180,7 +180,7 @@
 								</div>
 								<div class="tab-pane @if(isset($_GET['step']) && $_GET['step'] == 'easynet') active @endif" id="f">
 									<div class="icon-list mb-15 row justify-content-center ml-xs-0">
-										<div class="col-6 col-md-4">
+										<div class="col-6 col-sm-4 col-md-4">
 											<div class="item">
 												<div class="btn-icon" href="javascript:;"><img src="{{ url('/images/icon/icon_donate_Easy_Net.png') }}" /></div>
 											</div>
@@ -198,7 +198,7 @@
 								</div>
 								<div class="tab-pane @if(isset($_GET['step']) && $_GET['step'] == 'easyapp') active @endif" id="g">
 									<div class="icon-list mb-15 row justify-content-center ml-xs-0">
-										<div class="col-6 col-md-4">
+										<div class="col-6 col-sm-4 col-md-4">
 											<div class="item">
 												<div class="btn-icon" href="javascript:;"><img src="{{ url('/images/icon/icon_donate_easy_app.png') }}" /></div>
 											</div>
@@ -222,7 +222,7 @@
 								</div>
 								<div class="tab-pane @if(isset($_GET['step']) && $_GET['step'] == 'other') active @endif" id="h">
 									<div class="icon-list mb-15 row justify-content-center ml-xs-0">
-										<div class="col-6 col-md-4">
+										<div class="col-6 col-sm-4 col-md-4">
 											<div class="item">
 												<div class="btn-icon" href="javascript:;"><img src="{{ url('/images/icon/icon_box.png') }}" /></div>
 											</div>
@@ -253,19 +253,40 @@
 
 @section('scripts')
 <script type="text/javascript">
-	var tabsFn = (function() {
-		function init() {
-			setHeight();
+	if ($(window).width() > 767) {
+		var tabsFn = (function() {
+			function init() {
+				setHeight();
+			}
+			function setHeight() {
+			var $tabPane = $('.tab-pane'),
+			    tabsHeight = $('.nav-tabs').height();
+				$tabPane.css({
+				  height: tabsHeight
+				});
+			}
+			$(init);
+		})();
+	}
+	$(window).resize(function () {
+       if ($(window).width() > 767) {
+			var tabsFn = (function() {
+				function init() {
+					setHeight();
+				}
+				function setHeight() {
+				var $tabPane = $('.tab-pane'),
+				    tabsHeight = $('.nav-tabs').height();
+					$tabPane.css({
+					  height: tabsHeight
+					});
+				}
+				$(init);
+			})();
 		}
-		function setHeight() {
-		var $tabPane = $('.tab-pane'),
-		    tabsHeight = $('.nav-tabs').height();
-			$tabPane.css({
-			  height: tabsHeight
-			});
-		}
-		$(init);
-	})();
+    });
+
+    $(window).resize();
 
 </script>
 @endsection

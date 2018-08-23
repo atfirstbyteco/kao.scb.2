@@ -18905,14 +18905,49 @@ Responsive
     border-bottom: 1px solid #fff;
   }
 
+  .section-howto {
+    font-size: 14px;
+    padding-bottom: 3rem;
+    position: relative;
+    min-height: unset;
+  }
+
+  .section-howto .content {
+    position: relative;
+    top: 0;
+    -webkit-transform: none;
+            transform: none;
+  }
+
+  .nav-tabs .nav-item {
+    width: auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 14.285%;
+            flex: 0 0 14.285%;
+    max-width: 14.285%;
+    padding: 5px;
+  }
+
   .page-ticket {
     font-size: 12px;
+  }
+
+  footer {
+    padding: 30px 0 15px;
   }
 }
 
 @media (max-width: 575.98px) {
   .page-ticket .box {
     font-size: 10px;
+  }
+
+  .section-howto {
+    padding: 0;
+  }
+
+  .nav-tabs .nav-item {
+    padding: 5px 2px;
   }
 }
 
