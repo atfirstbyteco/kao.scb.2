@@ -35958,13 +35958,36 @@ module.exports = function spread(callback) {
 /***/ (function(module, exports) {
 
 $(document).ready(function () {
-	$(window).on('load', function () {
-		$('#popup-banner').modal('show');
-	});
 
 	// $('.home-ranking .open-list').on('click', function (e) {
 	// 	$(this).parent('.home-ranking').toggleClass('active');
 	// });
+
+	// $("img").each( function( ) {
+	//     var src = $(this).attr("src");
+	//     if( /\.gif$/i.test(src)) {
+	//         $(this).attr( "src", src.replace( /\.gif$/, ".gif?rnd=" + Math.floor(Math.random() * 100) + 1));
+	//     }
+	// });
+
+	// $(window).scroll(function(){
+	//     $('img[realsrc]').each(function(i){
+	//       var t = $(this);
+	//       if(t.position().top > ($(window).scrollTop() + $(window).height()) {
+	//         t.attr('src', t.attr('realsrc')); // trigger the image load
+	//         t.removeAttr('realsrc'); // so we only process this image once
+	//       }
+	//     });
+	// });
+
+	$('.sidebanner .btn').click(function () {
+		var target = $(this).parent();
+		if (target.hasClass('active-mobile')) {
+			target.removeClass('active-mobile');
+		} else {
+			target.addClass('active-mobile');
+		}
+	});
 
 	/* Scroll to anchor on click - Start */
 	$('a.btn-nav').click(function (e) {

@@ -285,7 +285,6 @@
 			})();
 		}
     });
-
     $(window).resize();
 
 </script>
