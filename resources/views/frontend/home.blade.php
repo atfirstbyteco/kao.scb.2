@@ -349,6 +349,7 @@
 
 <script>
 var deposit_balance = {{$totalamount_num}};
+var deposit_balance_x = "{{$totalamount}}";
 var api_url = "{{ env('API_ENDPOINT')}}";
 </script>
 <script src="{{asset('js/deposit.balance.js')}}"></script>

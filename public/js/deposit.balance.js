@@ -4,7 +4,7 @@ var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(
 var last = 0;
 (function ($) {
 	try{
-	$("#blance_total #bl").html('<b class="show_balance">0.00</b>');
+	$("#blance_total #bl").html('<b class="show_balance">'+deposit_balance_x+'</b>');
     var socket = io('https://dev.kao.afbcdn.com:3000/kao');
 
     socket.on('connect', function () {
@@ -75,9 +75,14 @@ function get_deposit_balance(){
 			let fl2 = (Math.floor(Math.random() * 15)+5);
 			let tm2 = 2000*fl2;
 			console.log("Next schedule Getbalance in",(tm2/1000),'secconds');
-			setTimeout(get_deposit_balance, tm2);
+			deposit_t = setTimeout(get_deposit_balance, tm2);
 		}
 	}).fail(function(e){
+        deposit_balance_display = parseFloat(deposit_balance).toFixed(2);
+        set_init_deposit_balance_display();
+        let fl2 = (Math.floor(Math.random() * 15)+5);
+			let tm2 = 2000*fl2;
+            deposit_t = setTimeout(get_deposit_balance, tm2);
 		//console.warning('API Error :',e);
 	});
 }
@@ -105,7 +110,7 @@ function set_init_deposit_balance_display()
             }
         });
     });
-    deposit_t = setTimeout(update_deposit_balance_display, 4000);
+    //deposit_t = setTimeout(update_deposit_balance_display, 4000);
     last = deposit_balance_display;
 }
 function update_deposit_balance_display()
