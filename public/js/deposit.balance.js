@@ -5,7 +5,7 @@ var last = 0;
 (function ($) {
 	try{
 	$("#blance_total #bl").html('<b class="show_balance">'+deposit_balance_x+'</b>');
-    var socket = io('https://dev.kao.afbcdn.com:3000/kao');
+    var socket = io(api_url);
 
     socket.on('connect', function () {
         var index = socket.io.engine.upgrade ? 1 : 0;
