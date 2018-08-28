@@ -21,13 +21,9 @@
 							</div>
 							<div class="box color-yellow tl-fadeInUp">
 								<h1 id="blance_total">
-									<b class="show_balance tl-flipX">0</b>
-									<b class="show_balance tl-flipX">0</b>
-									<b class="show_balance tl-flipX">0</b>
-									<b class="show_balance tl-flipX">0</b>
-									<b>.</b>
-									<b class="show_balance_decimal tl-flipX">0</b> 
-									<b class="show_balance_decimal tl-flipX">0</b> 
+                                    <b id="bl">
+                                    {!! $totalamount_string !!}
+                                    </b>
 									<span class="color-yellow">บาท</span>
 								</h1>
 							</div>
@@ -110,7 +106,7 @@
 					<div class="row justify-content-center justify-content-md-end">
 						<div class="col-12 col-md-9 p-0 tl2-fadeInRight">
 							<div class="iframe-wrapper" id="iframe-wrapper">
-								
+
 							</div>
 						</div>
 					</div>
@@ -144,7 +140,7 @@
 									เข้านอกออกในแบบไม่เคาะประตู (ยกเว้นตอนเข้าห้องน้ำ)
 									</div>
 									<span class="text-medium">บนเส้นทางจากเบตงถึงแม่สาย<br />
-									มาค้นพบแรงบันดาลใจไปพร้อมกัน</span> 
+									มาค้นพบแรงบันดาลใจไปพร้อมกัน</span>
 									<span class="text-large font-reg"> ทีละก้าว</span>
 								</div>
 								<div class="align-self-center">
@@ -170,7 +166,7 @@
 			<div class="h-title text-center text-italic mb-30">วิธีบริจาค</div>
 			<div class="row justify-content-center">
 				<div class="col-12 col-md-11 col-lg-10 col-xl-9">
-					
+
 					<div class="row justify-content-start justify-content-md-center icon-list tl4-fadeInUp">
 						<div class="col-6 col-md-3 pl-3 pr-3 pl-md-4 pr-md-4 mb-2 tl3-fadeInUp">
 							<div class="item">
@@ -231,7 +227,7 @@
         <div class="modal-content">
     		<span aria-hidden="true" class="close" data-dismiss="modal">&times;</span>
             <div class="modal-body">
-                
+
             	<div class="row justify-content-center align-items-center m-0">
             		<div class="col-12 p-0">
             			<img class="w-100" src="{{ url('/images/home/QR-banner.png') }}" />
@@ -349,5 +345,11 @@
     }
 
 </script>
+<script src="{{asset('js/jquery.animateNumber.min.js')}}"></script>
 
+<script>
+var deposit_balance = {{$totalamount_num}};
+var api_url = "{{ env('API_ENDPOINT')}}";
+</script>
+<script src="{{asset('js/deposit.balance.js')}}"></script>
 @endsection
