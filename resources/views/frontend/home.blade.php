@@ -275,6 +275,14 @@
 @endsection
 
 @section('scripts')
+<script>
+	$(window).load(function() {
+    if (window.localStorage && !localStorage['faded']) {
+        localStorage['faded'] = true;
+        $('body').hide().fadeIn(500);
+    }
+});
+</script>
 <script type="text/javascript">
 	// function onReady(callback) {
 	//   var intervalId = window.setInterval(function() {
