@@ -353,6 +353,7 @@
     }
 
 </script>
+<script src="{{asset('js/socket.io.js')}}"></script>
 <script src="{{asset('js/jquery.animateNumber.min.js')}}"></script>
 
 <script>

@@ -20,13 +20,14 @@ var last = 0;
 	socket.on('element-html', function (data) {
 	    $(data[0]).html(data[1]);
 	});
-	socket.on('update-deposit', function (data) {
+    socket.on('balance', function (data) {
+        console.log(data);
         if(last==0){
-	        $('#blance_total #bl .show_balance').html(addCommas(parseFloat(data).toFixed(2)));
+	        $('#blance_total #bl .show_balance').html(addCommas(parseFloat(data.balance).toFixed(2)));
         }else{
 	       $('#blance_total #bl .show_balance').each(function () {
 			    $(this).prop('Counter',last).animate({
-			        Counter: parseFloat(data)
+			        Counter: parseFloat(data.balance)
 			    }, {
 			        duration: 2000,
 			        easing: 'swing',
@@ -37,7 +38,7 @@ var last = 0;
 			});
         }
 
-		last=parseFloat(data);
+		last=parseFloat(data.balance);
     });
     }catch(e){
 	    get_deposit_balance();
