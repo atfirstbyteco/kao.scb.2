@@ -27,10 +27,10 @@
                     </button>
 		            <div class="navbar-collapse collapse" id="mainNav">
     					<ul class="navbar-nav w-100 justify-content-center nav-pills nav-fill">
-		                    <li class="nav-item active"><a class="nav-link" href="{{ url('/') }}">หน้าหลัก</a></li>
-		                    <li class="nav-item"><a class="nav-link" href="{{ url('/howto') }}">วิธีบริจาค</a></li>
-		                    <li class="nav-item"><a class="nav-link" href="{{ url('/howtoticket') }}">วิธีรับตั๋วภาพยนตร์</a></li>
-		                    <li class="nav-item"><a class="nav-link btn-nav" href="#about">ที่มาโครงการ</a></li>
+		                    <li class="nav-item {{ Request::is('/') ? 'active' : '' }}"><a class="nav-link" href="{{ url('/') }}">หน้าหลัก</a></li>
+		                    <li class="nav-item {{ Request::is('howto') ? 'active' : '' }}"><a class="nav-link" href="{{ url('/howto') }}">วิธีบริจาค</a></li>
+		                    <li class="nav-item {{ Request::is('howtoticket') ? 'active' : '' }}"><a class="nav-link" href="{{ url('/howtoticket') }}">วิธีรับตั๋วภาพยนตร์</a></li>
+		                    <li class="nav-item {{ Request::is('about') ? 'active' : '' }}"><a class="nav-link btn-nav" href="#about">ที่มาโครงการ</a></li>
 		                </ul>
 		            </div>
 		        </div>

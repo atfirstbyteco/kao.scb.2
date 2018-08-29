@@ -418,7 +418,7 @@ section {
       border-radius: 0;
       margin: 0.5rem 0 1.25rem;
       h1 { 
-        font-size: 4em;
+        font-size: 3em;
         span { 
           font-size: 1.5rem; 
           margin-top: 19px; 
@@ -710,8 +710,9 @@ table tbody tr:last-child td:last-child { border-bottom-right-radius: 20px; }
 .page-ticket {
   &.section-detail {
     background-color: #fff;
-    .text-medium { font-size: 1.6em; }
-    .text-large { font-size: 2em; }
+    .text-small { font-size: 1em; }
+    .text-medium { font-size: 1.45em; }
+    .text-large { font-size: 1.925em; }
     .text-lextra-arge { font-size: 2.5em; }
   }
   .box {
@@ -769,7 +770,7 @@ Responsive
   .section-home.section-banner {
     font-size: 20px;
   	.box h1 {
-      font-size: 3em;
+      font-size: 2.5em;
       margin: 0;
     }
   }
@@ -837,7 +838,7 @@ Responsive
       width: 95%;
       margin: 1rem auto;
       h1 {
-        font-size: 2.5em;
+        font-size: 2.25em;
       }
     }
   }
