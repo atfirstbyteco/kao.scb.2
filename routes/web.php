@@ -18,7 +18,7 @@ Route::get('/howto', function () {
     return view('frontend.howto');
 });
 
-Route::get('/howtoticket', function () {
+Route::get('/howtowatch', function () {
     return view('frontend.howtoticket');
 });
 

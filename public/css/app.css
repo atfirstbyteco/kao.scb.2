@@ -18838,6 +18838,7 @@ table tbody tr:last-child td:last-child {
 
 .page-ticket.section-detail .text-large {
   font-size: 1.925em;
+  line-height: normal;
 }
 
 .page-ticket.section-detail .text-lextra-arge {

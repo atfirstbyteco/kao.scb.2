@@ -18,7 +18,6 @@
 								<div class="mb-3 color-navy">
 									<div class="text-large font-reg mb-2">วิธีการรับตั๋วชมภาพยนตร์</div>
 									<span class="text-large">2,215</span><span class="text-medium"> เชื่อ บ้า กล้า ก้าว</span> 
-									<span class="text-extra-large font-reg pl-2 pr-2 bg-gray">ฟรี</span>
 								</div>
 								<div class="col-8 col-md-9 m-auto m-md-0">
 									<img class="w-100 mt-3 mb-4 mt-md-0 mb-md-0" src="{{ url('/images/ticket/logo.png') }}" />
@@ -67,7 +66,7 @@
 							</div>
 							<div class="text-small">
 								เช็ครอบฉายและราคาบัตรของโรงภาพยนตร์ในเครือ Major Cineplex  และ SF  ที่คุณต้องการชม<br class="d-none d-lg-block" />
-								สามารถซื้อตั๋วล่วงหน้าผ่านเว็บและแอปของ Major Cineplex  และ SF
+								สามารถซื้อตั๋วล่วงหน้าผ่านเว็บ และ Application ของ Major Cineplex  และ SF
 							</div>
 						</div>
 					</div>
@@ -77,10 +76,10 @@
 						</div>
 						<div class="col-12 col-sm-9 col-md-10 text-center text-sm-left">
 							<div class="text-medium">
-								3. กิจกรรมพิเศษ ดูหนังฟรี 14 – 16 กันยายนนี้ สนับสนุนโดย คิง เพาเวอร์
+								3. กิจกรรมพิเศษ ดูหนังฟรี 14 – 16 กันยายนนี้ สนับสนุนโดย คิง เพาเวอร์ ไทย เพาเวอร์ พลังคนไทย
 							</div>
 							<div class="text-small">
-								ที่สนามกีฬาแห่งชาติ อาคารกีฬานิมิบุตร โดย King Power Thai Power พลังคนไทย วันละ 4 รอบ ได้แก่ <br class="d-none d-lg-block" />
+								ที่สนามกีฬาแห่งชาติ อาคารกีฬานิมิบุตร โดย คิง เพาเวอร์ ไทย เพาเวอร์ พลังคนไทย วันละ 4 รอบ ได้แก่ <br class="d-none d-lg-block" />
 								12.00 น./14.30 น. /17.00 น./19.30 น. (ลงทะเบียนรับบัตรก่อนรับชมภาพยนตร์ 1 ชม.) <br class="d-none d-lg-block" />
 								รวมเป็น 12 รอบ รวมที่นั่งฟรีทั้งหมดกว่า 30,000  ที่นั่ง
 							</div>
@@ -90,8 +89,8 @@
 					<div class="row justify-content-center align-items-center mt-5 mb-5">
 						<div class="col-12 desc text-center mt-3">
 							<div class="mb-3 color-navy text-large font-reg">
-								แล้วมาส่งต่อกำลังใจดีๆ ผ่านภาพยนตร์ <br class="d-block c-md-none" /><span class="font-reg pl-2 pr-2 bg-gray">“2,215 เชื่อ บ้า กล้า ก้าว”</span><br />
-								6 กันยายนนี้เป็นต้นไป <br class="d-block c-md-none" />ในโรงภาพยนตร์เครือ Major Cineplex  และ SF
+								แล้วมาส่งต่อกำลังใจดีๆ ผ่านภาพยนตร์<br class="mb-3" /><span class="font-reg pl-2 pr-2 bg-gray">“2,215 เชื่อ บ้า กล้า ก้าว”</span><br class="mb-3" />
+								6 กันยายนนี้เป็นต้นไป
 							</div>
 						</div>
 					</div>
