@@ -39,11 +39,13 @@
 					<div class="col-12 col-md-6 col-xl-5 pr-30 pr-sm-15 pl-30 pl-sm-15">
 						<div class="title mb-4 pt-5 pt-md-3">ผู้สนับสนุน</div>
 						<div class="row">
-	                		@for($i=1; $i<=12; $i++)
+	                		@foreach($sponser as $row)
 	                			<div class="col-4 col-md-3 mb-30">
-	                				<a href="#" class="btn-square"><span></span></a>
+	                				<a class="btn-square"><span>
+		                			<img src="{{ \Storage::disk('s3')->url('uploads/sponsor/'.$row->sponsor_image) }}" />	
+		                			</span></a>
 	                			</div>
-							@endfor
+							@endforeach
 						</div>
 					</div>
 				</div>

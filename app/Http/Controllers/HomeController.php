@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
 use App\Models\Account;
+use App\Models\Sponsor;
 use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
@@ -13,6 +14,7 @@ class HomeController extends Controller
         $accounts_balance = Account::select(DB::raw('(SUM(account_adjust)+SUM(account_offset)+SUM(account_balance)) as total_donate'))->where([
             'active' => 1
         ])->pluck('total_donate');
+        $sponser = Sponsor::all();
         $totalamount = 0;
         foreach($accounts_balance as $account_balance){
             $totalamount += (float) $account_balance;
@@ -41,6 +43,6 @@ class HomeController extends Controller
                 break;
             }
         }
-        return view('frontend.home',compact('totalamount','totalamount_string','totalamount_num'));
+        return view('frontend.home',compact('totalamount','totalamount_string','totalamount_num','sponser'));
     }
 }
