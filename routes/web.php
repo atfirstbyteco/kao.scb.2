@@ -1,5 +1,5 @@
 <?php
-
+use App\Models\Sponsor;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,11 +14,16 @@
 Route::get('/','HomeController@index');
 
 Route::get('/howto', function () {
-
-    return view('frontend.howto');
+    $sponser = Sponsor::where([
+        'sponsor_status' => 'active',
+    ])->get();
+    return view('frontend.howto',compact('sponser'));
 });
 
 Route::get('/howtowatch', function () {
-    return view('frontend.howtoticket');
+    $sponser = Sponsor::where([
+        'sponsor_status' => 'active',
+    ])->get();
+    return view('frontend.howtoticket',compact('sponser'));
 });
 
