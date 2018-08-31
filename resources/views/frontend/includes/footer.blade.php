@@ -41,8 +41,8 @@
 						<div class="row">
 	                		@foreach($sponser as $row)
 	                			<div class="col-4 col-md-3 mb-30">
-	                				<a class="btn-square"><span>
-		                			<img style="width:100%" src="{{ \Storage::disk('s3')->url('uploads/sponsor/'.$row->sponsor_image) }}" />	
+	                				<a class="btn-square" ><span style="background-image: url({{ \Storage::disk('s3')->url('uploads/sponsor/'.$row->sponsor_image) }});background-size: cover;">
+		                			
 		                			</span></a>
 	                			</div>
 							@endforeach
