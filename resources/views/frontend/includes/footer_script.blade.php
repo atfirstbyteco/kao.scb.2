@@ -19,7 +19,3 @@
 <script type="text/javascript" src="{{ mix('/js/app.js') }}"></script>
 
 @yield('scripts')
-<!-- <script type="text/javascript" src="{{ url('/vendors/fullpage-js/vendors/jquery.easings.min.js') }}"></script>
-<script type="text/javascript" src="{{ url('/vendors/fullpage-js/vendors/jquery.slimscroll.min.js') }}"></script>
-<script type="text/javascript" src="{{ url('/vendors/fullpage-js/dist/jquery.fullpage.min.js') }}"></script> -->
-

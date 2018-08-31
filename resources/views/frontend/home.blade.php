@@ -272,7 +272,7 @@
 
 @section('scripts')
 <script>
-	$(window).load(function() {
+	$(window).on('load', function() {
     if (window.localStorage && !localStorage['faded']) {
         localStorage['faded'] = true;
         $('body').hide().fadeIn(500);
