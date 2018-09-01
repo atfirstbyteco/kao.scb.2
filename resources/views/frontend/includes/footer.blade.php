@@ -25,14 +25,14 @@
 							ตั้งแต่วันที่ 6 กันยายน 2561 เป็นต้นไป
 
 						</p>
-						<div class="text-right"><a class="color-navy" href="">ข้อมูลเพิ่มเติม</a></div>
+						<div class="text-right"><a class="color-navy" href="{{ url('/#') }}">ข้อมูลเพิ่มเติม</a></div>
 						<div class="row">
 							<div class="col-xs-6 col-sm-6">
 								<span class="text-small">follow us</span><br />
-								<a class="btn-icon-circle btn-navy mt-1" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+								<a class="btn-icon-circle btn-navy mt-1" href="https://web.facebook.com/2215-%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD-%E0%B8%9A%E0%B9%89%E0%B8%B2-%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2-%E0%B8%81%E0%B9%89%E0%B8%B2%E0%B8%A7-450782125433908"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 							</div>
 							<div class="col-xs-6 col-sm-6 text-right">
-								<a href="#" class="btn btn-navy inline-block mt-4 mt-md-2">ร่วมบริจาค</a>
+								<a href="{{ url('/#') }}" class="btn btn-navy inline-block mt-4 mt-md-2">ร่วมบริจาค</a>
 							</div>
 						</div>
 					</div>
@@ -55,7 +55,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 text-right">
-						<a href="#">Privacy Policy</a> <span class="mgl-5 mgr-5">|</span> <a href="#">Term of Use</a> <span class="mgl-5 mgr-5">|</span> <a href="#">Security Tips</a>
+						<!-- <a href="#">Privacy Policy</a> <span class="mgl-5 mgr-5">|</span> <a href="#">Term of Use</a> <span class="mgl-5 mgr-5">|</span> <a href="#">Security Tips</a> -->
 					</div>
 				</div>
 			</div>

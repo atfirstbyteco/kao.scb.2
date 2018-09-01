@@ -29,23 +29,23 @@ $(document).ready(function() {
 			target.addClass('active-mobile'); 
 		}
 	});
-
-	/* Scroll to anchor on click - Start */
-	$('a.btn-nav').click(function (e) {
-	    e.preventDefault();
-	    var navId = $(this).attr('href');
-	    var idHeight = $(navId).offset();
 	
-	    $('html, body').animate({
-	        scrollTop: (idHeight.top - 60)
-	    }, 1000);
+	/* Scroll to anchor on click - Start */
+	// $('a.btn-nav').click(function (e) {
+	//     e.preventDefault();
+	//     var navId = $(this).attr('href');
+	//     var idHeight = $(navId).offset();
+	
+	//     $('html, body').animate({
+	//         scrollTop: (idHeight.top - 60)
+	//     }, 1000);
 
-	    if($(window).width() < 768) {
-		    $('html, body').animate({
-		        scrollTop: (idHeight.top - 50)
-		    }, 1000);
-	    }
-	});
+	//     if($(window).width() < 768) {
+	// 	    $('html, body').animate({
+	// 	        scrollTop: (idHeight.top - 50)
+	// 	    }, 1000);
+	//     }
+	// });
 	/* Scroll to anchor on click - End */
 
 	$('#sharefb').on('click',share_facebook);

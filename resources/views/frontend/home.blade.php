@@ -147,7 +147,7 @@
 									<span class="text-italic text-xs-medium">ชมฟรี วันที่ 6-16 ก.ย. 61</span>
 									<br clear="d-block d-md-none" />
 									<br clear="d-block d-md-none" />
-									<a class="ml-md-3 btn d-inline-block" href="#"><span class="pl-4 pr-4">วิธีรับตั๋วชมภาพยนตร์</span></a>
+									<a class="ml-md-3 btn d-inline-block" href="{{ url('/howtowatch') }}"><span class="pl-4 pr-4">วิธีรับตั๋วชมภาพยนตร์</span></a>
 								</div>
 							</div>
 						</div>
@@ -273,11 +273,12 @@
 @section('scripts')
 <script>
 	$(window).on('load', function() {
-    if (window.localStorage && !localStorage['faded']) {
-        localStorage['faded'] = true;
-        $('body').hide().fadeIn(500);
-    }
-});
+	    if (window.localStorage && !localStorage['faded']) {
+	        localStorage['faded'] = true;
+	        $('body').hide().fadeIn(500);
+	    }
+	});
+
 </script>
 <script type="text/javascript">
 	// function onReady(callback) {
@@ -313,7 +314,7 @@
             .staggerFrom(".tl-fadeInDown", 0.45, {opacity:0, y: -100, autoAlpha:0}, 0.25)
             .staggerFrom(".tl-flipX", 0.25, {opacity:0, rotationX:360, autoAlpha:0}, 0.15)
             .staggerFrom(".tl-flipY", 0.25, {opacity:0, rotationY:360, autoAlpha:0}, 0.15);
-            $('#iframe-wrapper').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/xUssbTpky7o" frameborder="0" encrypted-media" allowfullscreen></iframe>');
+            $('#iframe-wrapper').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLdGd7Z3Ln0IR5wi7q-onX0wyxGmUadsFK" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
     });
 
     $(window).on("resize", resize);
