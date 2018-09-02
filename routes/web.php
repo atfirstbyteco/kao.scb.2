@@ -1,5 +1,11 @@
 <?php
 use App\Models\Sponsor;
+use Illuminate\Http\Request;
+if (env('REDIRECT_HTTPS') == 'true' || env('REDIRECT_HTTPS') == true) {
+    \URL::forceScheme('https');
+}else{
+    \URL::forceScheme('http');
+}
 /*
 |--------------------------------------------------------------------------
 | Web Routes
