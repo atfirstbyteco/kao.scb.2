@@ -22,14 +22,14 @@ Route::get('/','HomeController@index');
 Route::get('/howto', function () {
     $sponsor = Sponsor::where([
         'sponsor_status' => 'active',
-    ])->get();
+    ])->orderBy('sponsor_seq','asc')->get();
     return view('frontend.howto',compact('sponsor'));
 });
 
 Route::get('/howtowatch', function () {
     $sponsor = Sponsor::where([
         'sponsor_status' => 'active',
-    ])->get();
+    ])->orderBy('sponsor_seq','asc')->get();
     return view('frontend.howtoticket',compact('sponsor'));
 });
 
