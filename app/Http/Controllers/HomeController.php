@@ -16,7 +16,7 @@ class HomeController extends Controller
         ])->pluck('total_donate');
         $sponsor = Sponsor::where([
 	        'sponsor_status' => 'active',
-        ])->get();
+        ])->orderBy('sponsor_id')->get();
 
         // $sponsor_row = $sponsor->chunk(20);
 
