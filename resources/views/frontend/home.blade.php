@@ -41,11 +41,11 @@
 						</div>
 					</div>
 
-					<div class="row row-bottom justify-content-end-md ml-0 mr-0">
+					<!-- <div class="row row-bottom justify-content-end-md ml-0 mr-0">
 						<div class="col-auto">
 							<a class="btn-icon-circle ani btn-share-deposit" href="javascript:;" onclick="fbshare();"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
 						</div>
-					</div>
+					</div> -->
 
 				</div>
 			</div>
@@ -273,6 +273,7 @@
 @section('scripts')
 <script>
 	$(window).on('load', function() {
+		$('#popup-banner').modal('show');
 	    if (window.localStorage && !localStorage['faded']) {
 	        localStorage['faded'] = true;
 	        $('body').hide().fadeIn(500);
@@ -281,6 +282,7 @@
 
 </script>
 <script type="text/javascript">
+
 	// function onReady(callback) {
 	//   var intervalId = window.setInterval(function() {
 	//     if (document.getElementsByTagName('body')[0] !== undefined) {
