@@ -35959,27 +35959,6 @@ module.exports = function spread(callback) {
 
 $(document).ready(function () {
 
-	// $('.home-ranking .open-list').on('click', function (e) {
-	// 	$(this).parent('.home-ranking').toggleClass('active');
-	// });
-
-	// $("img").each( function( ) {
-	//     var src = $(this).attr("src");
-	//     if( /\.gif$/i.test(src)) {
-	//         $(this).attr( "src", src.replace( /\.gif$/, ".gif?rnd=" + Math.floor(Math.random() * 100) + 1));
-	//     }
-	// });
-
-	// $(window).scroll(function(){
-	//     $('img[realsrc]').each(function(i){
-	//       var t = $(this);
-	//       if(t.position().top > ($(window).scrollTop() + $(window).height()) {
-	//         t.attr('src', t.attr('realsrc')); // trigger the image load
-	//         t.removeAttr('realsrc'); // so we only process this image once
-	//       }
-	//     });
-	// });
-
 	var slideWrapper = $(".home-slider");
 	slideWrapper.slick({
 		dots: false,

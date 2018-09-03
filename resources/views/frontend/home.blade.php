@@ -273,6 +273,7 @@
 @section('scripts')
 <script>
 	$(window).on('load', function() {
+		$('#popup-banner').modal('show');
 	    if (window.localStorage && !localStorage['faded']) {
 	        localStorage['faded'] = true;
 	        $('body').hide().fadeIn(500);
@@ -281,6 +282,7 @@
 
 </script>
 <script type="text/javascript">
+
 	// function onReady(callback) {
 	//   var intervalId = window.setInterval(function() {
 	//     if (document.getElementsByTagName('body')[0] !== undefined) {
