@@ -143,3 +143,29 @@ function update_deposit_balance_display()
 	deposit_t = setTimeout(update_deposit_balance_display, 3000*ft);
 }
 
+function fbshare()
+{
+    FB.ui({
+        method: 'feed',
+        link: window.location.href
+
+      }, function(response){
+
+    });
+}
+window.fbAsyncInit = function() {
+    FB.init({
+        appId      : '817308938474623',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+};
+(function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
