@@ -41,11 +41,11 @@
 						</div>
 					</div>
 
-					<div class="row row-bottom justify-content-end-md ml-0 mr-0">
+					<!-- <div class="row row-bottom justify-content-end-md ml-0 mr-0">
 						<div class="col-auto">
 							<a class="btn-icon-circle ani btn-share-deposit" href="javascript:;" onclick="fbshare();"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
 						</div>
-					</div>
+					</div> -->
 
 				</div>
 			</div>
