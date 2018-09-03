@@ -14,9 +14,14 @@ class HomeController extends Controller
         $accounts_balance = Account::select(DB::raw('(SUM(account_adjust)+SUM(account_offset)+SUM(account_balance)) as total_donate'))->where([
             'active' => 1
         ])->pluck('total_donate');
-        $sponser = Sponsor::where([
+        $sponsor = Sponsor::where([
 	        'sponsor_status' => 'active',
         ])->get();
+
+        // $sponsor_row = $sponsor->chunk(20);
+
+        // dd($sponsor_row);
+
         $totalamount = 0;
         foreach($accounts_balance as $account_balance){
             $totalamount += (float) $account_balance;
@@ -45,6 +50,6 @@ class HomeController extends Controller
                 break;
             }
         }
-        return view('frontend.home',compact('totalamount','totalamount_string','totalamount_num','sponser'));
+        return view('frontend.home',compact('totalamount','totalamount_string','totalamount_num','sponsor'));
     }
 }

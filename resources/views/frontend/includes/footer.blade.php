@@ -38,15 +38,22 @@
 					</div>
 					<div class="col-12 col-md-6 col-xl-5 pr-30 pr-sm-15 pl-30 pl-sm-15">
 						<div class="title mb-4 pt-5 pt-md-3">ผู้สนับสนุน</div>
-						<div class="row">
-	                		@foreach($sponser as $row)
-	                			<div class="col-4 col-md-3 mb-30">
-	                				<a class="btn-square" ><span style="background-image: url({{ \Storage::disk('s3')->url('uploads/sponsor/'.$row->sponsor_image) }}); background-size: contain;  background-position: center;  background-repeat: no-repeat;">
+							<div class="home-slider">
+                			
+	                		@foreach($sponsor->chunk(12) as $index => $sponsor_item)
 
-		                			</span></a>
+	                			<div class="item row">
+	                				@foreach($sponsor_item as $row)
+		                			<div class="col-4 col-md-3 mb-30">
+		                				<a class="btn-square" href="javascript:;"><span style="background-image: url({{ \Storage::disk('s3')->url('uploads/sponsor/'.$row->sponsor_image) }}); background-size: contain;  background-position: center;  background-repeat: no-repeat;">
+			                			</span></a>
+		                			</div>
+	                				@endforeach
 	                			</div>
+
 							@endforeach
-						</div>
+							</div>
+
 					</div>
 				</div>
 			</div>
