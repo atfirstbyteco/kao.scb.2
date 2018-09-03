@@ -18859,6 +18859,12 @@ table tbody tr:last-child td:last-child {
   line-height: 1.8;
 }
 
+.slick-initialized .slick-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /***********************************************
 Responsive
 ***********************************************/

@@ -21,6 +21,16 @@ $(document).ready(function() {
 	//     });
 	// });
 
+	var slideWrapper = $(".home-slider");
+	slideWrapper.slick({
+		dots: false,
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 4000,
+		speed: 500,
+		infinite: false
+	});
+
 	$('.sidebanner .btn').click(function(){
 		var target = $(this).parent();
 		if(target.hasClass('active-mobile')){ 
@@ -29,6 +39,7 @@ $(document).ready(function() {
 			target.addClass('active-mobile'); 
 		}
 	});
+	
 	
 	/* Scroll to anchor on click - Start */
 	// $('a.btn-nav').click(function (e) {

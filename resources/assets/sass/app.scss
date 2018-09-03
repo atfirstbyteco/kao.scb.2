@@ -724,7 +724,9 @@ table tbody tr:last-child td:last-child { border-bottom-right-radius: 20px; }
     .text-medium { line-height: 1.8; }
   }
 }
-
+.slick-initialized .slick-slide {
+  display: flex;
+}
 
 /***********************************************
 Responsive
