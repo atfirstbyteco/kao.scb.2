@@ -20,16 +20,16 @@ if (env('REDIRECT_HTTPS') == 'true' || env('REDIRECT_HTTPS') == true) {
 Route::get('/','HomeController@index');
 
 Route::get('/howto', function () {
-    $sponser = Sponsor::where([
+    $sponsor = Sponsor::where([
         'sponsor_status' => 'active',
     ])->get();
-    return view('frontend.howto',compact('sponser'));
+    return view('frontend.howto',compact('sponsor'));
 });
 
 Route::get('/howtowatch', function () {
-    $sponser = Sponsor::where([
+    $sponsor = Sponsor::where([
         'sponsor_status' => 'active',
     ])->get();
-    return view('frontend.howtoticket',compact('sponser'));
+    return view('frontend.howtoticket',compact('sponsor'));
 });
 
