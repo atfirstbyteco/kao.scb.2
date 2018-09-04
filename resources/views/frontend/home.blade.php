@@ -44,7 +44,7 @@
 							<div class="d-none d-md-block pb-md-5 pt-md-5 mt-md-5 mb-md-5 w-100"></div>
 						</div>
 						<div class="col-12 col-md-4 pt-md-5 align-self-end p-xs-0 p-sm-0 col-p-toon">
-							<img class="mt-5 tl-fadeIn d-none d-md-block" src="{{ url('/images/home/p_toon_banner.png') }}" />
+							<img class="mt-5 tl-fadeInLeft d-none d-md-block" src="{{ url('/images/home/p_toon_banner.png') }}" />
 							<img class="d-block d-md-none w-100" realsrc="" src="{{ url('/images/home/animate-banner-mb.gif') }}" />
 						</div>
 					</div>
@@ -322,8 +322,9 @@
         .staggerFrom(".tl-fadeIn", 0.5, {opacity:0, zIndex:2, autoAlpha:0}, 0.35)
         .staggerFrom(".tl-fadeInUp", 0.45, {delay: 0.5, opacity:0, y: 100, autoAlpha:0}, 0.35)
         .staggerFrom(".tl-fadeInDown", 0.45, {opacity:0, y: -100, autoAlpha:0}, 0.25)
-        .staggerFrom(".tl-flipX", 0.25, {opacity:0, rotationX:360, autoAlpha:0}, 0.15)
-        .staggerFrom(".tl-flipY", 0.25, {opacity:0, rotationY:360, autoAlpha:0}, 0.15);
+        .staggerFrom(".tl-fadeInLeft", 0.45, {opacity:0, x: 100, autoAlpha:0}, 0.25)
+        .staggerFrom(".tl-flipX", 0.35, {opacity:0, rotationX:360, autoAlpha:0}, 0.15)
+        .staggerFrom(".tl-flipY", 0.35, {opacity:0, rotationY:360, autoAlpha:0}, 0.15);
     $(window).on("load", function() {
             // $('#iframe-wrapper').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLdGd7Z3Ln0IR5wi7q-onX0wyxGmUadsFK&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
             $('#iframe-wrapper').html('<video autoplay controls><source src="https://s3-ap-southeast-1.amazonaws.com/prdkaokonlakao2/videos/2215-kaokonlakao.mp4" type="video/mp4"></video>');
