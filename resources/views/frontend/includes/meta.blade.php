@@ -18,7 +18,7 @@
 <meta property="og:url" content="{{ URL::current() }}" />
 <meta property="og:type" content="website" />
 
-<meta property="og:title" content="ภาพยนตร์ก้าวคนละก้าว" />
+<meta property="og:title" content="โครงการก้าวคนละก้าว" />
 <meta property="og:description" content="" />
 <meta property="og:image" content="{{ url('/images/Share.jpg') }}" />
 <meta property="og:image:width" content="1200"/>
