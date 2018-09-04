@@ -271,6 +271,7 @@
 @endsection
 
 @section('scripts')
+@if($exists_cookie!="yes")
 <script>
 	$(window).on('load', function() {
 		$('#popup-banner').modal('show');
@@ -281,6 +282,7 @@
 	});
 
 </script>
+@endif
 <script type="text/javascript">
 
 	// function onReady(callback) {

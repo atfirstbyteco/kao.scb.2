@@ -56,6 +56,9 @@ class HomeController extends Controller
                 break;
             }
         }
-        return view('frontend.home',compact('totalamount','totalamount_string','totalamount_num','sponsor'));
+        $exists_cookie = $request->cookie('frontendhome');
+
+        $cookie = cookie('frontendhome', 'yes', 1440);
+        return response()->view('frontend.home',compact('exists_cookie','totalamount','totalamount_string','totalamount_num','sponsor'))->withCookie($cookie);
     }
 }
