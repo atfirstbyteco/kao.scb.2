@@ -29,7 +29,7 @@
 						<div class="row">
 							<div class="col-xs-6 col-sm-6">
 								<span class="text-small">follow us</span><br />
-								<a class="btn-icon-circle btn-navy mt-1" href="https://web.facebook.com/2215-%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD-%E0%B8%9A%E0%B9%89%E0%B8%B2-%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2-%E0%B8%81%E0%B9%89%E0%B8%B2%E0%B8%A7-450782125433908"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+								<a class="btn-icon-circle btn-navy mt-1" href="https://www.facebook.com/kaokonlakao/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 							</div>
 							<div class="col-xs-6 col-sm-6 text-right">
 								<a href="{{ url('/howto') }}" class="btn btn-navy inline-block mt-4 mt-md-2">ร่วมบริจาค</a>
@@ -39,7 +39,7 @@
 					<div class="col-12 col-md-6 col-xl-5 pr-30 pr-sm-15 pl-30 pl-sm-15">
 						<div class="title mb-4 pt-5 pt-md-3">ผู้สนับสนุน</div>
 							<div class="home-slider">
-                			
+
 	                		@foreach($sponsor->chunk(12) as $index => $sponsor_item)
 
 	                			<div class="item row">

@@ -7,13 +7,19 @@ use Illuminate\Support\Facades\Redis;
 use App\Models\Account;
 use App\Models\Sponsor;
 use Illuminate\Support\Facades\DB;
+
+
 class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        $accounts_balance = Account::select(DB::raw('(SUM(account_adjust)+SUM(account_offset)+SUM(account_balance)) as total_donate'))->where([
-            'active' => 1
-        ])->pluck('total_donate');
+        // $accounts_balance = Account::select(DB::raw('(SUM(account_adjust)+SUM(account_offset)+SUM(account_balance)) as total_donate'))->where([
+        //     'active' => 1
+        // ])->pluck('total_donate');
+        $totalamount = (float) Redis::get('balance_display');
+        if($totalamount < 1){
+            $totalamount = (float) Redis::get('balance');
+        }
         $sponsor = Sponsor::where([
 	        'sponsor_status' => 'active',
         ])->orderBy('sponsor_seq','asc')->get();
@@ -22,10 +28,10 @@ class HomeController extends Controller
 
         // dd($sponsor_row);
 
-        $totalamount = 0;
-        foreach($accounts_balance as $account_balance){
-            $totalamount += (float) $account_balance;
-        }
+        // $totalamount = 0;
+        // foreach($accounts_balance as $account_balance){
+        //     $totalamount += (float) $account_balance;
+        // }
         $totalamount_num = number_format($totalamount,2,'.','');
         $totalamount = number_format($totalamount,2);
         $totalamounts = str_split($totalamount);
@@ -50,6 +56,9 @@ class HomeController extends Controller
                 break;
             }
         }
-        return view('frontend.home',compact('totalamount','totalamount_string','totalamount_num','sponsor'));
+        $exists_cookie = $request->cookie('frontendhome');
+
+        $cookie = cookie('frontendhome', 'yes', 1440);
+        return response()->view('frontend.home',compact('exists_cookie','totalamount','totalamount_string','totalamount_num','sponsor'))->withCookie($cookie);
     }
 }

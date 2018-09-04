@@ -271,6 +271,7 @@
 @endsection
 
 @section('scripts')
+@if($exists_cookie!="yes")
 <script>
 	$(window).on('load', function() {
 		$('#popup-banner').modal('show');
@@ -281,6 +282,7 @@
 	});
 
 </script>
+@endif
 <script type="text/javascript">
 
 	// function onReady(callback) {
@@ -316,7 +318,7 @@
             .staggerFrom(".tl-fadeInDown", 0.45, {opacity:0, y: -100, autoAlpha:0}, 0.25)
             .staggerFrom(".tl-flipX", 0.25, {opacity:0, rotationX:360, autoAlpha:0}, 0.15)
             .staggerFrom(".tl-flipY", 0.25, {opacity:0, rotationY:360, autoAlpha:0}, 0.15);
-            $('#iframe-wrapper').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLdGd7Z3Ln0IR5wi7q-onX0wyxGmUadsFK" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+            $('#iframe-wrapper').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLdGd7Z3Ln0IR5wi7q-onX0wyxGmUadsFK&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
     });
 
     $(window).on("resize", resize);

@@ -33,3 +33,4 @@ Route::get('/howtowatch', function () {
     return view('frontend.howtoticket',compact('sponsor'));
 });
 
+Route::get('/share/image/{time?}','ShareController@image');
