@@ -2,15 +2,16 @@
 
 @section('content')
 <style type="text/css">
-	.section-home,
+	.section-home .bg1,
 	.section-home .h-title,
 	.section-home .box,
 	.section-home .desc,
+	.section-home .col-p-toon,
 	.right-box { visibility: hidden; }
 </style>
 <!-- <div class="loading">Loading&#8230;</div> -->
 <div class="fullpage-wrapper page">
-	<section id="target" class="section section-home section-banner tl-fadeIn">
+	<section id="target" class="section section-home section-banner">
 		<div id="bg1" class="bg1 tl-fadeIn d-none d-md-block">
 			<img realsrc="" src="{{ url('/images/home/animate-banner.gif') }}" />
 		</div>
@@ -42,7 +43,7 @@
 							<div class="d-none d-md-block pb-md-5 pt-md-5 mt-md-5 mb-md-5 w-100"></div>
 							<div class="d-none d-md-block pb-md-5 pt-md-5 mt-md-5 mb-md-5 w-100"></div>
 						</div>
-						<div class="col-12 col-md-4 pt-md-5 align-self-end p-xs-0 p-sm-0">
+						<div class="col-12 col-md-4 pt-md-5 align-self-end p-xs-0 p-sm-0 col-p-toon">
 							<img class="mt-5 tl-fadeIn d-none d-md-block" src="{{ url('/images/home/p_toon_banner.png') }}" />
 							<img class="d-block d-md-none w-100" realsrc="" src="{{ url('/images/home/animate-banner-mb.gif') }}" />
 						</div>
