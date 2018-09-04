@@ -58,7 +58,7 @@
 					</div>
 					<div class="row justify-content-center align-items-center mb-4 box ml-xs-0 mr-xs-0">
 						<div class="col-12 col-sm-3 col-md-2 pr-30 text-center">
-							<img class="w-xs-auto w-100 mb-sm-30" src="{{ url('/images/ticket/icon2.png') }}" />
+							<img class="w-xs-auto w-100 mb-sm-30" src="{{ url('/images/ticket/icon3.png') }}" />
 						</div>
 						<div class="col-12 col-sm-9 col-md-10 text-center text-sm-left">
 							<div class="text-medium">
@@ -72,7 +72,7 @@
 					</div>
 					<div class="row justify-content-center align-items-center mb-5 box ml-xs-0 mr-xs-0">
 						<div class="col-12 col-sm-3 col-md-2 pr-30 text-center">
-							<img class="w-xs-auto w-100 mb-sm-30" src="{{ url('/images/ticket/icon3.png') }}" />
+							<img class="w-xs-auto w-100 mb-sm-30" src="{{ url('/images/ticket/icon2.png') }}" />
 						</div>
 						<div class="col-12 col-sm-9 col-md-10 text-center text-sm-left">
 							<div class="text-medium">
