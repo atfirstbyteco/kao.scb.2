@@ -1,6 +1,13 @@
 @extends('layouts.master')
 
 @section('content')
+<style type="text/css">
+	.section-home,
+	.section-home .h-title,
+	.section-home .box,
+	.section-home .desc,
+	.right-box { visibility: hidden; }
+</style>
 <!-- <div class="loading">Loading&#8230;</div> -->
 <div class="fullpage-wrapper page">
 	<section id="target" class="section section-home section-banner tl-fadeIn">
@@ -304,19 +311,19 @@
 
     var controller = new ScrollMagic.Controller();
 
-    TweenMax.from(".slideLeft", 0.75, {x:100, opacity:0, autoAlpha:0, ease:Power1.easeInOut});
-    TweenMax.from(".slideRight", 1.0, {x:-100, opacity:0, autoAlpha:0, ease:Power1.easeInOut});
+    TweenMax.from(".slideLeft", 0.75, {delay: 2.5, x:100, opacity:0, autoAlpha:0, ease:Power1.easeInOut});
+    TweenMax.from(".slideRight", 1.0, {delay: 2.5, x:-100, opacity:0, autoAlpha:0, ease:Power1.easeInOut});
     TweenMax.to(".ani", 0.5, {y:5, ease:Power1.easeInOut, repeat:-1, yoyo:true});
 
-    var tl = new TimelineMax();
+    var tl = new TimelineMax({delay: 0, immediateRender: false});
     // {delay: 0.5,immediateRender: false}
+    tl
+        .staggerFrom(".tl-fadeIn", 0.5, {opacity:0, zIndex:2, autoAlpha:0}, 0.35)
+        .staggerFrom(".tl-fadeInUp", 0.45, {delay: 0.5, opacity:0, y: 100, autoAlpha:0}, 0.35)
+        .staggerFrom(".tl-fadeInDown", 0.45, {opacity:0, y: -100, autoAlpha:0}, 0.25)
+        .staggerFrom(".tl-flipX", 0.25, {opacity:0, rotationX:360, autoAlpha:0}, 0.15)
+        .staggerFrom(".tl-flipY", 0.25, {opacity:0, rotationY:360, autoAlpha:0}, 0.15);
     $(window).on("load", function() {
-        tl
-            .staggerFrom(".tl-fadeIn", 0.5, {opacity:0, zIndex:2, autoAlpha:0}, 0.35)
-            .staggerFrom(".tl-fadeInUp", 0.45, {opacity:0, y: 100, autoAlpha:0}, 0.35)
-            .staggerFrom(".tl-fadeInDown", 0.45, {opacity:0, y: -100, autoAlpha:0}, 0.25)
-            .staggerFrom(".tl-flipX", 0.25, {opacity:0, rotationX:360, autoAlpha:0}, 0.15)
-            .staggerFrom(".tl-flipY", 0.25, {opacity:0, rotationY:360, autoAlpha:0}, 0.15);
             // $('#iframe-wrapper').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLdGd7Z3Ln0IR5wi7q-onX0wyxGmUadsFK&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
             $('#iframe-wrapper').html('<video autoplay controls><source src="https://s3-ap-southeast-1.amazonaws.com/prdkaokonlakao2/videos/2215-kaokonlakao.mp4" type="video/mp4"></video>');
 
