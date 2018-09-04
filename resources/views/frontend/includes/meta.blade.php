@@ -35,3 +35,13 @@
 <meta itemprop="name" content="ภาพยนตร์ก้าวคนละก้าว">
 <meta itemprop="description" content="">
 <meta itemprop="image" content="{{ url('/images/Share.jpg') }}">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125168373-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125168373-1');
+</script>
