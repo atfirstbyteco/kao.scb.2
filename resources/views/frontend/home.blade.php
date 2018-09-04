@@ -104,9 +104,8 @@
 
 					<div class="h-title text-center text-md-right text-italic color-navy mb-2">ตัวอย่างภาพยนตร์</div>
 					<div class="row justify-content-center justify-content-md-end">
-						<div class="col-12 col-md-9 p-0 tl2-fadeInRight">
+						<div class="col-12 col-md-9 p-3 p-md-0">
 							<div class="iframe-wrapper" id="iframe-wrapper">
-
 							</div>
 						</div>
 					</div>
@@ -318,13 +317,16 @@
             .staggerFrom(".tl-fadeInDown", 0.45, {opacity:0, y: -100, autoAlpha:0}, 0.25)
             .staggerFrom(".tl-flipX", 0.25, {opacity:0, rotationX:360, autoAlpha:0}, 0.15)
             .staggerFrom(".tl-flipY", 0.25, {opacity:0, rotationY:360, autoAlpha:0}, 0.15);
-            $('#iframe-wrapper').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLdGd7Z3Ln0IR5wi7q-onX0wyxGmUadsFK&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+            // $('#iframe-wrapper').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLdGd7Z3Ln0IR5wi7q-onX0wyxGmUadsFK&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+            $('#iframe-wrapper').html('<video autoplay controls><source src="https://s3-ap-southeast-1.amazonaws.com/prdkaokonlakao2/videos/2215-kaokonlakao.mp4" type="video/mp4"></video>');
+
     });
 
     $(window).on("resize", resize);
     resize();
 
     function resize() {
+    	// $('#iframe-wrapper').html('<video autoplay controls><source src="https://s3-ap-southeast-1.amazonaws.com/prdkaokonlakao2/videos/2215-kaokonlakao.mp4" type="video/mp4"></video>');
         if (window.matchMedia("(min-width: 769px)").matches) {
 
             var scene0 = new ScrollMagic.Scene({triggerElement: "#target", offset: 500})

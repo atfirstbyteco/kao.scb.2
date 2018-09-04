@@ -18203,14 +18203,15 @@ a.color-navy:focus {
 
 .iframe-wrapper {
   position: relative;
-  padding-bottom: 56.625%;
+  padding-bottom: 55.8%;
   padding-top: 0;
   height: 0;
   margin: 0;
   border: 3px solid #193153;
 }
 
-.iframe-wrapper iframe {
+.iframe-wrapper iframe,
+.iframe-wrapper video {
   position: absolute;
   top: 0px;
   left: 0px;
