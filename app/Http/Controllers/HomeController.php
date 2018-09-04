@@ -32,8 +32,8 @@ class HomeController extends Controller
         // foreach($accounts_balance as $account_balance){
         //     $totalamount += (float) $account_balance;
         // }
-        // $totalamount_num = number_format($totalamount,2,'.','');
-        // $totalamount = number_format($totalamount,2);
+        $totalamount_num = number_format($totalamount,2,'.','');
+        $totalamount = number_format($totalamount,2);
         $totalamounts = str_split($totalamount);
         $totalamount_string = "";
         $decimal=false;
