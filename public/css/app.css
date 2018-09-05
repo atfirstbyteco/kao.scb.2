@@ -18109,6 +18109,7 @@ a.color-navy:focus {
 
 .btn-icon-circle .fa {
   font-size: 16px;
+  padding-top: 7px;
 }
 
 .btn-icon-circle:hover,
