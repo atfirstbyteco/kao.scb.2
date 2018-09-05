@@ -27,7 +27,7 @@ class ShareController extends Controller
 
         imagettftext($im, $fontsize, 0, $x-540, 287, $fontcolor, $fontpath, $totalamount);
         header('Content-Type: image/jpeg');
-        imagejpeg($im, null, 100);
+        imagejpeg($im, null, 70);
         imagedestroy($im);
        //return response()->header('Content-Type', 'image/jpg');
     }
