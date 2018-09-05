@@ -145,9 +145,10 @@ function update_deposit_balance_display()
 
 function fbshare()
 {
+    var d = new Date();
     FB.ui({
         method: 'feed',
-        link: window.location.href
+        link: 'https://www.kaokonlakao.com/?t='+d.getTime(),
 
       }, function(response){
 
