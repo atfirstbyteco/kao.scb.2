@@ -329,7 +329,7 @@
 
     $(window).on("load", function() {
             // $('#iframe-wrapper').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLdGd7Z3Ln0IR5wi7q-onX0wyxGmUadsFK&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
-            $('#iframe-wrapper').html('<video controls><source src="https://s3-ap-southeast-1.amazonaws.com/prdkaokonlakao2/videos/2215-kaokonlakao.mp4" type="video/mp4"></video>');
+            $('#iframe-wrapper').html('<video controls poster="{{ url("/images/cover-video.jpg") }}"><source src="https://s3-ap-southeast-1.amazonaws.com/prdkaokonlakao2/videos/2215-kaokonlakao.mp4" type="video/mp4"></video>');
 
     });
 
