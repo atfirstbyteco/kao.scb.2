@@ -1,21 +1,21 @@
 @extends('layouts.master')
 
-@section('content')
 <style type="text/css">
-	.section-home .bg1,
-	.section-home .h-title,
-	.section-home .box,
-	.section-home .desc,
-	.section-home .col-p-toon,
+	.section-home .banner .bg1,
+	.section-home .banner .h-title,
+	.section-home .banner .box,
+	.section-home .banner .desc,
+	.section-home .banner .col-p-toon,
 	.right-box { visibility: hidden; }
 </style>
+@section('content')
 <!-- <div class="loading">Loading&#8230;</div> -->
 <div class="fullpage-wrapper page">
 	<section id="target" class="section section-home section-banner">
 		<div id="bg1" class="bg1 tl-fadeIn d-none d-md-block">
 			<img realsrc="" src="{{ url('/images/home/animate-banner.gif') }}" />
 		</div>
-		<div class="container-fluid">
+		<div class="container-fluid banner">
 			<div class="row justify-content-center">
 				<div class="col-12 text-center text-md-left col-md-11 col-lg-10 col-xl-9">
 
@@ -43,8 +43,8 @@
 							<div class="d-none d-md-block pb-md-5 pt-md-5 mt-md-5 mb-md-5 w-100"></div>
 							<div class="d-none d-md-block pb-md-5 pt-md-5 mt-md-5 mb-md-5 w-100"></div>
 						</div>
-						<div class="col-12 col-md-4 pt-md-5 align-self-end p-xs-0 p-sm-0 col-p-toon">
-							<img class="mt-5 tl-fadeInLeft d-none d-md-block" src="{{ url('/images/home/p_toon_banner.png') }}" />
+						<div class="col-12 col-md-4 pt-md-5 align-self-end p-xs-0 p-sm-0 col-p-toon tl-fadeInLeft">
+							<img class="mt-5 d-none d-md-block" src="{{ url('/images/home/p_toon_banner.png') }}" />
 							<img class="d-block d-md-none w-100" realsrc="" src="{{ url('/images/home/animate-banner-mb.gif') }}" />
 						</div>
 					</div>
@@ -103,8 +103,8 @@
 		</div>
 
 	</section>
-	<div class="trigger2"></div>
 
+	<div class="trigger2"></div>
 	<section id="section2" class="section section-home section-video">
 		<div class="container-fluid">
 			<div class="row justify-content-center">
@@ -113,8 +113,7 @@
 					<div class="h-title text-center text-md-right text-italic color-navy mb-2">ตัวอย่างภาพยนตร์</div>
 					<div class="row justify-content-center justify-content-md-end">
 						<div class="col-12 col-md-9 p-3 p-md-0">
-							<div class="iframe-wrapper" id="iframe-wrapper">
-							</div>
+							<div class="iframe-wrapper" id="iframe-wrapper"></div>
 						</div>
 					</div>
 
@@ -122,6 +121,7 @@
 			</div>
 		</div>
 	</section>
+
 	<section id="section3" class="section section-home section-detail pb-0">
 		<div class="bg-top d-none d-md-block"></div>
 		<div class="container-fluid">
@@ -167,6 +167,7 @@
 			</div>
 		</div>
 	</section>
+
 	<div class="trigger4"></div>
 	<section id="section4" class="section section-home section-howto pb-3">
 		<div class="container main pt-2 pb-2 pt-md-4 pb-md-4">
@@ -309,7 +310,7 @@
 	//   setVisible('.page', true);
 	//   setVisible('.loading', false);
 	// });
-
+	// $('.sidebanner').removeClass('active');
     var controller = new ScrollMagic.Controller();
 
     TweenMax.from(".slideLeft", 0.75, {delay: 2.5, x:100, opacity:0, autoAlpha:0, ease:Power1.easeInOut});
@@ -323,19 +324,19 @@
         .staggerFrom(".tl-fadeInUp", 0.45, {delay: 0.5, opacity:0, y: 100, autoAlpha:0}, 0.35)
         .staggerFrom(".tl-fadeInDown", 0.45, {opacity:0, y: -100, autoAlpha:0}, 0.25)
         .staggerFrom(".tl-fadeInLeft", 0.45, {opacity:0, x: 100, autoAlpha:0}, 0.25)
-        .staggerFrom(".tl-flipX", 0.35, {opacity:0, rotationX:360, autoAlpha:0}, 0.15)
-        .staggerFrom(".tl-flipY", 0.35, {opacity:0, rotationY:360, autoAlpha:0}, 0.15);
+        .staggerFrom(".tl-flipX", 0.5, {opacity:0, rotationX:360, autoAlpha:0}, 0.15)
+        .staggerFrom(".tl-flipY", 0.5, {opacity:0, rotationY:360, autoAlpha:0}, 0.15);
+
     $(window).on("load", function() {
             // $('#iframe-wrapper').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLdGd7Z3Ln0IR5wi7q-onX0wyxGmUadsFK&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
-            $('#iframe-wrapper').html('<video autoplay controls><source src="https://s3-ap-southeast-1.amazonaws.com/prdkaokonlakao2/videos/2215-kaokonlakao.mp4" type="video/mp4"></video>');
+            $('#iframe-wrapper').html('<video controls><source src="https://s3-ap-southeast-1.amazonaws.com/prdkaokonlakao2/videos/2215-kaokonlakao.mp4" type="video/mp4"></video>');
 
     });
 
-    $(window).on("resize", resize);
     resize();
+    $(window).on("resize", resize);
 
     function resize() {
-    	// $('#iframe-wrapper').html('<video autoplay controls><source src="https://s3-ap-southeast-1.amazonaws.com/prdkaokonlakao2/videos/2215-kaokonlakao.mp4" type="video/mp4"></video>');
         if (window.matchMedia("(min-width: 769px)").matches) {
 
             var scene0 = new ScrollMagic.Scene({triggerElement: "#target", offset: 500})
@@ -358,11 +359,11 @@
 
             var tl4 = new TimelineMax();
             tl4
-                .staggerFrom(".tl4-fadeInUp", 0.3, {opacity:0, scale: 0.5, y: 200, ease:Power1.easeInOut}, 0.1);;
+                .staggerFrom(".tl4-fadeInUp", 0.3, {opacity:0, scale: 0.5, y: 200, ease:Power1.easeInOut}, 0.1);
             var scene4 = new ScrollMagic.Scene({ triggerElement: ".trigger4"}).setTween(tl4).addTo(controller);
 
         } else {
-            $('.sidebanner').removeClass('active');
+            // $('.sidebanner').removeClass('active');
             controller.enabled(false);
             // tl.kill();
         }
@@ -373,7 +374,7 @@
 <script src="{{asset('js/jquery.animateNumber.min.js')}}"></script>
 
 <script>
-var deposit_balance = {{$totalamount_num}};
+var deposit_balance = "{{$totalamount_num}}";
 var deposit_balance_x = "{{$totalamount}}";
 var api_url = "{{ env('API_ENDPOINT')}}";
 </script>
