@@ -1,13 +1,4 @@
 @extends('layouts.master')
-
-<style type="text/css">
-	.section-home .banner .bg1,
-	.section-home .banner .h-title,
-	.section-home .banner .box,
-	.section-home .banner .desc,
-	.section-home .banner .col-p-toon,
-	.right-box { visibility: hidden; }
-</style>
 @section('content')
 <!-- <div class="loading">Loading&#8230;</div> -->
 <div class="fullpage-wrapper page">

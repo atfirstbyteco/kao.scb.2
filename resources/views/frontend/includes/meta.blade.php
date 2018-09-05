@@ -55,3 +55,11 @@
 
   gtag('config', 'UA-109066356-1');
 </script>
+<style type="text/css">
+	.section-home .banner .bg1,
+	.section-home .banner .h-title,
+	.section-home .banner .box,
+	.section-home .banner .desc,
+	.section-home .banner .col-p-toon,
+	.right-box { visibility: hidden; }
+</style>
