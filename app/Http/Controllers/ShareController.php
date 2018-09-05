@@ -13,6 +13,7 @@ class ShareController extends Controller
         $totalamount = (float) Redis::get('balance_display');
         $totalamount = number_format($totalamount,2);
         $bgimage = storage_path('app/share-b.jpg');
+        $tmpimage = storage_path('app/share-tmp.jpg');
         $fontpath = storage_path('app/PSL096pro.ttf');
         $im  = imagecreatetruecolor($width, $height);
         $imbg = imagecreatefromjpeg($bgimage);
@@ -26,9 +27,13 @@ class ShareController extends Controller
         $fontcolor = imagecolorallocate($im, 25, 49, 83);
 
         imagettftext($im, $fontsize, 0, $x-540, 287, $fontcolor, $fontpath, $totalamount);
-        header('Content-Type: image/jpeg');
-        imagejpeg($im, null, 100);
+
+        imagejpeg($im, $tmpimage, 70);
         imagedestroy($im);
+        header('Content-Type: image/jpeg');
+        header('Content-Length: '.filesize($tmpimage));
+        header('Last-Modified: '.gmdate('D, d M Y H:i:s', time()).' GMT');
+        readfile($tmpimage);
        //return response()->header('Content-Type', 'image/jpg');
     }
 }
