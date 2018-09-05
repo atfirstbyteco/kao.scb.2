@@ -221,12 +221,14 @@ a {
 
 .iframe-wrapper { 
   position: relative; 
-  padding-bottom: 56.625%; 
+  // padding-bottom: 56.625%; 
+  padding-bottom: 55.8%;
   padding-top: 0; 
   height: 0; 
   margin: 0;
   border: 3px solid $color-navy;
-  iframe { position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; width: 100%; height: 100%; }
+  iframe,
+  video { position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; width: 100%; height: 100%; }
 }
 
 .h-title { font-size: 2rem; font-family: 'db_heaventregular'; }
@@ -477,7 +479,7 @@ section {
   background-color: #366083;
   transition: all 0.5s;
   .btn { 
-    padding: 7px 15px; 
+    padding: 6px 15px; 
     padding-left: 42px; 
     width: auto; 
     color: #fff; 
@@ -523,6 +525,8 @@ section {
 .sidebanner.active.active-mobile { position: fixed; width: 0; height: 192px; }
 .sidebanner.active.unactive .icon-list,
 .sidebanner.active.active-mobile .icon-list { width: 0; display: none; }
+// .sidebanner.active.active-mobile { position: fixed; width: 100%; height: 100%; }
+// .sidebanner.active.active-mobile .icon-list { width: 0; display: none; }
 
 .sidebanner.active,
 .sidebanner.unactive.addbg.active-mobile { position: fixed; display: table; width: 200px; height: auto; }
@@ -726,6 +730,7 @@ table tbody tr:last-child td:last-child { border-bottom-right-radius: 20px; }
 }
 .slick-initialized .slick-slide {
   display: flex;
+  height: auto;
 }
 
 /***********************************************
@@ -853,12 +858,14 @@ Responsive
   .sidebanner {
     position:absolute;
     top:auto;
-    bottom:65px;
+    bottom:0px;
     height:0;
     width:50px;
     border-width:0;
     padding:0 !important;
     visibility: hidden;
+    height:100%;
+    background: transparent;
     .icon-list {
       opacity: 0;
     }
@@ -877,6 +884,8 @@ Responsive
       background: url(/images/banner/icon_donate.png) no-repeat right 10px top 4px/28px auto $color-navy;
       border-radius:30px 0 0 30px;
       padding:20px 0 0px 13px !important;
+      bottom: 65px;
+      top: auto;
       span{
         display: none;
         // margin-top:2px;
@@ -888,12 +897,12 @@ Responsive
     .btn-icon-circle{ display:inline-block; }
     &.active-mobile {
       visibility: visible;
-      position:fixed;
+      position:absolute;
       width:100%;
       height:100%;
       top:0;
       right:0;
-      left:0;
+      // left:0;
       bottom: 0;
       display: block;
       background:#0a1427;
@@ -952,6 +961,27 @@ Responsive
   footer {
     padding: 30px 0 15px;
   }
+
+  .sidebanner .btn {
+    bottom: 15px;
+  }
+  .sidebanner .icon-list {
+    height: 100%;
+    display: block;
+    width: 0;
+  }
+  .sidebanner.active {
+    height: 100%;
+    width: 50px;
+    right: 0;
+    .icon-list {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  .sidebanner.active.active-mobile { position: fixed; width: 100%; height: 100%; }
+  .sidebanner.active.active-mobile .icon-list { width: 100%; display: block; }
 
 }
 
