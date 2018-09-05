@@ -35963,7 +35963,7 @@ $(document).ready(function () {
 	slideWrapper.slick({
 		dots: false,
 		arrows: false,
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 4000,
 		speed: 500,
 		infinite: false

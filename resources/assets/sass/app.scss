@@ -730,6 +730,7 @@ table tbody tr:last-child td:last-child { border-bottom-right-radius: 20px; }
 }
 .slick-initialized .slick-slide {
   display: flex;
+  height: auto;
 }
 
 /***********************************************
