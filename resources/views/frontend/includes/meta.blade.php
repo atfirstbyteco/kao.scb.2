@@ -23,6 +23,7 @@
 <meta property="og:image" content="{{ url('share/image/'.time().'.jpg') }}" />
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="628"/>
+<meta property="og:updated_time" content="{{ time() }}" />
 <!-- Tweet Propertie -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@kaokonlakao" />
