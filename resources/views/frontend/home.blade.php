@@ -35,8 +35,13 @@
 							<div class="d-none d-md-block pb-md-5 pt-md-5 mt-md-5 mb-md-5 w-100"></div>
 						</div>
 						<div class="col-12 col-md-4 pt-md-5 align-self-end p-xs-0 p-sm-0 col-p-toon tl-fadeInLeft">
+							<!-- <picture>
+								<source media="(min-width: 767px)" srcset="{ url('/images/home/animate-banner-mb.gif') }}">
+								<img class="mt-5" src="{{ url('/images/home/p_toon_banner.png') }}">
+							</picture> -->
 							<img class="mt-5 d-none d-md-block" src="{{ url('/images/home/p_toon_banner.png') }}" />
 							<img class="d-block d-md-none w-100" realsrc="" src="{{ url('/images/home/animate-banner-mb.gif') }}" />
+
 						</div>
 					</div>
 
