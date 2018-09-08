@@ -18493,7 +18493,7 @@ section {
 
 .section-home.section-howto {
   z-index: 10;
-  background: url(/images/home/howto-bg-bottom.png) no-repeat center/cover;
+  background: url(/images/home/howto-bg-bottom.jpg) no-repeat center/cover;
   position: relative;
 }
 
@@ -19046,6 +19046,7 @@ Responsive
     bottom: 0;
     display: block;
     background: #0a1427;
+    padding-top: 7px;
     z-index: 99999 !important;
   }
 
